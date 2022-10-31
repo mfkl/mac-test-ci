@@ -23,8 +23,8 @@ jobs:
         run: |
           dotnet tool install cake.tool --global
           dotnet workload install macos
-          dotnet cake
-      # - name: Add msbuild to PATH
-      #   uses: microsoft/setup-msbuild@v1.1.3
-      # - name: Build app for release
-      #   run: dotnet cake
+      #    dotnet cake
+      - name: Add msbuild to PATH
+        uses: microsoft/setup-msbuild@v1.1.3
+      - name: Build app for release
+        run: msbuild /t:restore,build
