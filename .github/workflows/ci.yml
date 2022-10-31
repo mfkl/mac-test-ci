@@ -19,6 +19,7 @@ jobs:
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: 6.0.x
-      - name: build
-        run: |
-          msbuild /t:restore,build
+      - name: Add msbuild to PATH
+        uses: microsoft/setup-msbuild@v1.1.3
+      - name: Build app for release
+        run: msbuild /t:restore,build
