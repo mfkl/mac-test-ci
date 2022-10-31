@@ -1,6 +1,6 @@
 <Project Sdk="MSBuild.Sdk.Extras">
   <PropertyGroup>
-    <TargetFramework>xamarin.mac20</TargetFramework>
+    <TargetFrameworks>xamarin.mac20;net6.0-macos</TargetFrameworks>
     <RootNamespace>mac_test_ci</RootNamespace>
   </PropertyGroup>
 </Project>
