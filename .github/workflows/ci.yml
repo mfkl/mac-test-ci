@@ -19,10 +19,11 @@ jobs:
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: 6.0.x
-      - name: install net6-macos
+      - name: install net6-macos and cake
         run: |
+          dotnet tool install Cake.Tool --version 2.3.0
           dotnet workload install macos
       - name: Add msbuild to PATH
         uses: microsoft/setup-msbuild@v1.1.3
       - name: Build app for release
-        run: msbuild /t:restore,build
+        run: dotnet cake
