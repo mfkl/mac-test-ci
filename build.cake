@@ -9,6 +9,8 @@ var configuration = Argument("configuration", "Release");
 Task("Build")
     .Does(() =>
 {
+    DotNetRestore();
+    
     var settings = new MSBuildSettings();
     settings.SetConfiguration(configuration);
     settings.ToolVersion = MSBuildToolVersion.VS2022;
