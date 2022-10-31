@@ -1,6 +1,8 @@
-﻿namespace mac_test_ci
+﻿using AppKit;
+
+namespace mac_test_ci
 {
-    public class Class1
+    public class Class1 : NSView
     {
 
     }
